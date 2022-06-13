@@ -45,3 +45,22 @@ exports.edit = (req, res, next) => {
       next(error);
     });
 };
+
+exports.searchBySenasaId = (req, res, next) => {
+  const { senasaId } = req.query;
+  if ((/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]){16}$/).test(senasaId)) {
+    Animal.find({ senasaId})
+      .then((foundAnimal) => {
+        if(foundAnimal) res.send(foundAnimal);
+        else res.send("No animal found for this SENASA ID")
+      })
+      .catch((error) => {
+        res.status(400);
+        next(new Error(error));
+      });
+
+  } else {
+    res.status(400);
+    next(new Error("Please provide a valid SENASA ID"));
+  }
+};

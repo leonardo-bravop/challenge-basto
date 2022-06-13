@@ -5,5 +5,6 @@ const animalController = require("../controllers/animalController")
 router.get("/get", animalController.get)
 router.post("/create", animalController.create)
 router.put("/edit", animalController.edit);
+router.get("/search", animalController.searchBySenasaId)
 
 module.exports = router;
