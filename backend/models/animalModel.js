@@ -42,7 +42,7 @@ const animalSchema = mongoose.Schema(
     deviceNumber: {
       type: String,
       required: true,
-      match: [/[a-zA-Z0-9]{8}/, "Please provide a valid SENASA ID"],
+      match: [/[a-zA-Z0-9]{8}/, "Please provide a valid device number"],
     },
   },
   {
@@ -50,6 +50,6 @@ const animalSchema = mongoose.Schema(
   }
 );
 
-const Animal = mongoose.model("Animal", noteSchema);
+const Animal = mongoose.model("Animal", animalSchema);
 
 module.exports = Animal;
