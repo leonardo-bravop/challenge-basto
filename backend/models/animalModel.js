@@ -5,7 +5,7 @@ const animalSchema = mongoose.Schema(
     senasaId: {
       type: String,
       required: true,
-      match: [/[a-zA-Z0-9]{16}/, "Please provide a valid SENASA ID"],
+      match: [/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]){16}$/, "Please provide a valid SENASA ID"],
     },
     type: {
       type: String,
@@ -42,7 +42,7 @@ const animalSchema = mongoose.Schema(
     deviceNumber: {
       type: String,
       required: true,
-      match: [/[a-zA-Z0-9]{8}/, "Please provide a valid device number"],
+      match: [/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]){8}$/, "Please provide a valid device number"],
     },
   },
   {
