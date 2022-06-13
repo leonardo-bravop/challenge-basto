@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+const router = require("./routes");
 const volleyball = require("volleyball");
 const connectDB = require("./config/db");
 
@@ -8,6 +9,8 @@ connectDB();
 
 app.use(volleyball);
 app.use(express.json());
+
+app.use("/api", router);
 
 app.use((req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
