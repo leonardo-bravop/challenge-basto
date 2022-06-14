@@ -6,7 +6,6 @@ exports.create = (req, res, next) => {
 
   Animal.create({ senasaId, type, weight, cattleRanch, device, deviceNumber })
     .then((newAnimal) => {
-      console.log(`new animal es`, newAnimal);
       res.send(newAnimal).status(201);
     })
     .catch((error) => {
@@ -39,7 +38,6 @@ exports.edit = (req, res, next) => {
   const { senasaId, type, weight, cattleRanch, device, deviceNumber } =
     req.body;
 
-  console.log(`req body es`, req.body);
 
   Animal.findByIdAndUpdate(
     { _id },
