@@ -2,13 +2,15 @@
 
 A .env file is required to connect to a MongoAtlas Database
 
-Example: 
+Example:
 
 PORT=5000
 
 DATABASE_URL=validMongoDBURL
 
 NODE_ENV=development
+
+Then, you'll need to install the dependencies of the backend with `npm i` and for the frontend with `cd frontend && npm i`
 
 ## Available Scripts
 
