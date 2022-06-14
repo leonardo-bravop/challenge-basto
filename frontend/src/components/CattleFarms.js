@@ -11,7 +11,7 @@ import { Pagination, Button } from "react-bootstrap";
 const labelsArray = [
   "ID SENASA",
   "Tipo",
-  "Peso",
+  "Peso (kg)",
   "Potrero",
   "Dispositivo",
   "Número de dispositivo",

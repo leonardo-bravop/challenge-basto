@@ -1,12 +1,12 @@
-import './App.css';
-import CattleFarms from './components/CattleFarms';
-import Navbar from './components/Navbar';
+import "./App.css";
+import CattleFarms from "./components/CattleFarms";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-     <CattleFarms/>
+      <Navbar />
+      <CattleFarms />
     </div>
   );
 }
