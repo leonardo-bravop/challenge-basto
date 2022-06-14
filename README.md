@@ -2,9 +2,11 @@
 
 A .env file is required to connect to a MongoAtlas Database
 
+Example: 
+
 PORT=5000
 
-DATABASE_URL=<A valid mongodb database url>
+DATABASE_URL=validMongoDBURL
 
 NODE_ENV=development
 
