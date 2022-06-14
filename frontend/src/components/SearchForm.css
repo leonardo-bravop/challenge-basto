@@ -1,0 +1,22 @@
+.searchForm,
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.searchForm {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.inputContainer {
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  height: 38px;
+  margin-right: 10px;
+}
