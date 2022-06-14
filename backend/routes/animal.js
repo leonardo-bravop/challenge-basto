@@ -6,5 +6,6 @@ router.get("/get", animalController.get)
 router.post("/create", animalController.create)
 router.put("/edit", animalController.edit);
 router.get("/search", animalController.searchBySenasaId)
+router.delete("/delete", animalController.delete)
 
 module.exports = router;
